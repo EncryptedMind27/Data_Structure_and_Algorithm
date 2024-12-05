@@ -351,3 +351,30 @@ STACK createSTACK(int capacity){
 	stack->arr = (element*)malloc(sizeof(element)*capacity);
 	return stack;
 }
+
+int isFull(STACK stack){
+	return (stack->size == stack->capacity);
+}
+
+int isEmpty(STACK stack){
+	return (stack->size == 0);
+}
+
+void push(STACK stack, element data){
+	if(!isFull(stack)){
+		stack->arr[stack->size++] = data;
+	}
+}
+
+void pop(STACK stack){
+	if(!isEmpty(stack)){
+		stack->arr[stack->size--] = 0;
+	}
+}
+
+void displaySTACK(STACK stack){
+	printf("[%d]: ",stack->size);
+	for(int i=0;i<stack->size;i++)
+		printf("%d ",stack->arr[i]);
+	printf("\n");
+}

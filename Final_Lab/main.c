@@ -79,4 +79,13 @@ void cllMain(){
 	displayCLL(list);}
 void stackMain(){
 	STACK stack = createSTACK(5);
+	push(stack,5);
+	push(stack,4);
+	push(stack,2);
+	push(stack,1);
+	push(stack,3);
+	displaySTACK(stack);
+
+	pop(stack);
+	displaySTACK(stack);
 }

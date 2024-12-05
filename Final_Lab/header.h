@@ -81,7 +81,7 @@ STACK createSTACK(int);
 int isFull(STACK);
 int isEmpty(STACK);
 void push(STACK,element);
-void pop(STACK,element);
+void pop(STACK);
 void displaySTACK(STACK);
 
 
